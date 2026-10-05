@@ -494,3 +494,142 @@ button { font: inherit; }
   .hero-inner { padding-top: 88px; padding-bottom: 52px; }
   .mobile-dock { width: min(100%, 720px); }
 }
+
+/* ===== V4.2 · balanced spacing & visual polish ===== */
+@media (max-width: 699px) {
+  /* 전체 밀도: V4.1보다 숨을 조금 더 주되, 다시 늘어지지 않게 */
+  .section-shell { width: min(calc(100% - 36px), 720px); }
+  .section-pad { padding: 76px 0; }
+
+  /* Hero */
+  .hero-inner { padding: 60px 0 46px; }
+  .live-badge { margin-bottom: 18px; }
+  .hero-copy > p:last-child { margin-top: 20px; line-height: 1.72; }
+  .profile-card {
+    margin-top: 34px;
+    padding: 20px;
+    border-radius: 26px;
+    background: linear-gradient(145deg, rgba(255,255,255,.145), rgba(255,255,255,.065));
+    box-shadow: 0 28px 65px rgba(0,0,0,.20), inset 0 1px 0 rgba(255,255,255,.05);
+  }
+  .avatar {
+    width: 44px; height: 44px; border-radius: 14px;
+    background: linear-gradient(145deg, #d1fbff, #86c9ff);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.75), 0 7px 20px rgba(91,190,255,.12);
+  }
+  .profile-divider { margin: 17px 0 5px; }
+  .profile-contact a { padding: 10px 0; }
+  .profile-actions { margin-top: 15px; }
+  .action-button { min-height: 49px; }
+
+  /* 흐르는 서비스 띠는 배경을 분리해 섹션 전환 역할 */
+  .marquee-wrap { background: #f8fbff; border-top: 1px solid rgba(18,54,92,.05); }
+  .marquee-track { padding: 15px 0; color: #7c8899; }
+
+  /* 섹션 타이포 및 여백 */
+  .section-heading { margin-bottom: 28px; }
+  .kicker { margin-bottom: 13px; }
+  .section-heading > p:last-child:not(.kicker) { margin-top: 14px; line-height: 1.72; }
+
+  /* 흰색 카드들의 깊이를 통일 */
+  .performance-card,
+  .fact-card,
+  .tool-card,
+  .manage-card,
+  .review-card,
+  .proof-card {
+    border-color: #e3eaf2;
+    box-shadow: 0 10px 26px rgba(14,45,80,.045);
+  }
+
+  /* 4대 시스템 */
+  .systems { background: linear-gradient(180deg, #f5f8fc 0%, #f8fbfe 100%); }
+  .system-tabs {
+    padding: 6px;
+    border-radius: 18px;
+    border-color: #dce5ef;
+    box-shadow: 0 7px 24px rgba(14,47,82,.05);
+  }
+  .system-tab { min-height: 42px; color: #68788b; }
+  .system-tab.is-active {
+    background: linear-gradient(145deg, #0a2d54, #0d4379);
+    box-shadow: 0 8px 18px rgba(11,49,91,.17);
+  }
+  .system-stage { margin-top: 14px; }
+  .system-panel {
+    padding: 25px 20px;
+    border: 1px solid rgba(120,210,255,.08);
+    border-radius: 25px;
+    background: linear-gradient(145deg, #071b31 0%, #0a315b 58%, #0d477f 100%);
+    box-shadow: 0 20px 45px rgba(4,42,81,.13);
+  }
+  .system-panel h3 { margin: 11px 0 12px; }
+  .system-panel p { line-height: 1.72; }
+  .system-points { margin-top: 19px; }
+
+  /* 업무 카드 간격 */
+  .tool-cards,
+  .management-grid,
+  .review-grid { gap: 12px; }
+  .tool-card,
+  .manage-card,
+  .review-card { padding-top: 22px; padding-bottom: 22px; border-radius: 23px; }
+
+  /* 마지막 상담은 다시 조금 여유 있게 */
+  .final-cta { padding-top: 78px; padding-bottom: 84px; }
+  .final-cta h2 { font-size: clamp(35px, 9vw, 46px); line-height: 1.1; }
+  .final-cta .cta-inner > p:not(.kicker) { margin: 18px 0 28px; line-height: 1.75; }
+  .cta-phone { padding: 19px 19px; border-radius: 21px; }
+  .cta-phone strong { font-size: 23px; }
+  .cta-mail { margin-top: 18px; }
+
+  .footer { padding-top: 30px; padding-bottom: calc(86px + env(safe-area-inset-bottom)); }
+  .footer p, .footer a { color: rgba(255,255,255,.46); }
+
+  /* 하단 고정 CTA: 덩어리감은 줄이고 떠 있는 느낌 */
+  .mobile-dock {
+    gap: 8px;
+    padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+    background: rgba(247,249,252,.92);
+    border-top: 1px solid rgba(9,40,75,.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  .mobile-dock a {
+    min-height: 48px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(13,54,95,.06);
+  }
+}
+
+/* Fold 외부 화면 등 380px 이하: 과도한 축소 대신 적당한 여백 유지 */
+@media (max-width: 380px) {
+  .section-shell { width: calc(100% - 32px); }
+  .section-pad { padding: 70px 0; }
+
+  .hero-inner { padding-top: 50px; padding-bottom: 40px; }
+  .hero-copy h1 { font-size: 39px; }
+  .hero-copy > p:last-child { font-size: 13px; line-height: 1.72; }
+  .profile-card { margin-top: 30px; padding: 18px; }
+  .profile-contact a { padding: 9px 0; }
+  .profile-actions { margin-top: 13px; }
+  .action-button { min-height: 47px; }
+
+  .section-heading { margin-bottom: 25px; }
+  .section-heading h2 { font-size: 31px; line-height: 1.14; }
+  .section-heading > p:last-child:not(.kicker) { font-size: 12px; }
+
+  .system-tabs { padding: 5px; gap: 4px; }
+  .system-tab { min-height: 40px; font-size: 10px; }
+  .system-panel { padding: 22px 17px; }
+  .system-panel h3 { font-size: 22px; }
+
+  .final-cta { padding-top: 72px; padding-bottom: 76px; }
+  .final-cta h2 { font-size: 35px; }
+  .final-cta .cta-inner > p:not(.kicker) { font-size: 12px; margin-bottom: 25px; }
+  .cta-phone { padding: 17px; }
+  .cta-phone strong { font-size: 21px; }
+
+  .mobile-dock { padding-left: 10px; padding-right: 10px; }
+  .mobile-dock a { min-height: 46px; }
+}
