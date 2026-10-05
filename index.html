@@ -3,183 +3,336 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#163f78" />
-  <meta name="description" content="(주)도움건설정보 비드헬프 - 공공 전자입찰 분석·공동도급·개별관리 상담. 곽소영 팀장." />
+  <meta name="theme-color" content="#071a33" />
+  <meta name="description" content="(주)도움건설정보 BIDHELP - 공공 전자입찰 분석·공동도급·입찰관리·집중관리 상담, 곽소영 팀장." />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="BIDHELP | 곽소영 팀장" />
-  <meta property="og:description" content="전기·통신·소방·전문면허 공공 전자입찰 분석과 관리 상담" />
+  <meta property="og:description" content="전기·통신·소방·전문건설 공공 전자입찰 분석과 공동도급 상담" />
   <title>BIDHELP | 곽소영 팀장</title>
   <link rel="stylesheet" href="./styles.css" />
+  <script src="./script.js" defer></script>
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
   <main>
-    <section class="hero section-shell">
-      <nav class="topbar" aria-label="상단 정보">
+    <section class="hero" id="top">
+      <div class="hero-orb hero-orb-a" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-b" aria-hidden="true"></div>
+      <div class="grid-noise" aria-hidden="true"></div>
+
+      <nav class="topbar section-shell" aria-label="상단 메뉴">
         <a class="brand" href="#top" aria-label="BIDHELP 홈">
-          <span class="brand-mark" aria-hidden="true">
-            <i></i><i></i><i></i><i></i>
-          </span>
-          <span>
-            <strong>BIDHELP</strong>
-            <small>(주)도움건설정보</small>
+          <span class="brand-logo-frame">
+            <img class="brand-logo" src="./assets/logo.png" alt="BIDHELP (주)도움건설정보" />
           </span>
         </a>
-        <a class="mini-link" href="https://www.bidhelp.co.kr" target="_blank" rel="noreferrer">공식 홈페이지</a>
+        <a class="top-pill" href="https://www.bidhelp.co.kr" target="_blank" rel="noreferrer">
+          공식 홈페이지 <span>↗</span>
+        </a>
       </nav>
 
-      <div class="hero-copy" id="top">
-        <p class="eyebrow">공공 전자입찰 전문 컨설팅</p>
-        <h1>입찰 분석부터<br />낙찰 이후 관리까지.</h1>
-        <p class="hero-description">전기·통신·소방·전문면허(일부) 기업의 입찰 데이터를 분석하고, 공동도급과 업체별 관리까지 지원합니다.</p>
-      </div>
+      <div class="hero-inner section-shell">
+        <div class="hero-copy reveal is-visible">
+          <div class="live-badge"><span class="pulse-dot"></span> 공공 전자입찰 전문 컨설팅</div>
+          <h1>입찰은 <span class="gradient-text">데이터로</span></h1>
+          <p>전기 · 통신 · 소방 · 전문건설 입찰 분석부터 공동도급, 입찰관리, 업체별 집중관리까지 연결합니다.</p>
+        </div>
 
-      <article class="contact-card" aria-label="곽소영 팀장 연락처">
-        <div class="contact-heading">
-          <div>
-            <p class="label">상담 담당</p>
-            <h2>곽소영 <span>팀장</span></h2>
+        <article class="profile-card reveal is-visible" aria-label="곽소영 팀장 디지털 명함">
+          <div class="profile-card-glow" aria-hidden="true"></div>
+          <div class="profile-top">
+            <div class="avatar" aria-hidden="true">KSY</div>
+            <div class="profile-name">
+              <span>입찰사업부</span>
+              <h2>곽소영 <small>팀장</small></h2>
+            </div>
+            <span class="available">상담 가능</span>
           </div>
-          <span class="status">상담 문의</span>
-        </div>
-        <div class="contact-meta">
-          <a href="tel:01029877208"><span>휴대전화</span><strong>010-2987-7208</strong></a>
-          <a href="tel:0267373680"><span>대표전화</span><strong>02-6737-3680</strong></a>
-          <a href="mailto:ktrsad@daum.net"><span>이메일</span><strong>ktrsad@daum.net</strong></a>
-        </div>
-        <div class="hero-actions">
-          <a class="button primary" href="tel:01029877208">전화 상담</a>
-          <a class="button secondary" href="sms:01029877208">문자 문의</a>
-        </div>
-      </article>
-    </section>
 
-    <section class="trust section-shell" aria-label="주요 실적">
-      <div class="section-title">
-        <p class="eyebrow">성과로 확인하는 비드헬프</p>
-        <h2>오랫동안 축적한 입찰 데이터와 분석 경험</h2>
-        <p>제공해주신 소개자료 기준 수치입니다.</p>
-      </div>
-      <div class="stat-grid">
-        <article class="stat-card featured">
-          <span>2025년 총 낙찰금액</span>
-          <strong>2,016<em>억</em></strong>
-          <small>2024년 1,947억 → 2025년 2,016억</small>
-        </article>
-        <article class="stat-card">
-          <span>2025년 공동도급</span>
-          <strong>772<em>억</em></strong>
-          <small>전년 대비 증가</small>
-        </article>
-        <article class="stat-card">
-          <span>2016년 → 2025년</span>
-          <strong>150<em>억</em> → 2,016<em>억</em></strong>
-          <small>소개자료 기재 실적</small>
-        </article>
-      </div>
-      <p class="note">※ 실적 수치는 회사 제공자료 기준이며 개별 업체의 낙찰 결과를 보장하지 않습니다.</p>
-    </section>
+          <div class="profile-divider"></div>
 
-    <section class="services section-shell">
-      <div class="section-title">
-        <p class="eyebrow">BIDHELP SERVICE</p>
-        <h2>필요한 부분을 한 번에 관리합니다</h2>
-      </div>
-      <div class="service-list">
-        <article class="service-card">
-          <span class="service-no">01</span>
-          <div>
-            <h3>낙찰 분석 서비스</h3>
-            <p>업체별 낙찰 성향과 누적 데이터를 바탕으로 공고를 분석하고 투찰 전략 수립을 지원합니다.</p>
+          <div class="profile-contact">
+            <a href="tel:01029877208">
+              <span class="contact-icon" aria-hidden="true">☎</span>
+              <span><small>휴대전화</small><strong>010-2987-7208</strong></span>
+              <em>›</em>
+            </a>
+            <a href="mailto:ktrsa@daum.net">
+              <span class="contact-icon" aria-hidden="true">@</span>
+              <span><small>이메일</small><strong>ktrsa@daum.net</strong></span>
+              <em>›</em>
+            </a>
+          </div>
+
+          <div class="profile-actions">
+            <a class="action-button light" href="tel:01029877208">전화 상담</a>
+            <a class="action-button glass" href="sms:01029877208">문자 문의</a>
           </div>
         </article>
-        <article class="service-card">
-          <span class="service-no">02</span>
-          <div>
-            <h3>공동도급 매칭</h3>
-            <p>지역·면허·실적 등 조건을 검토해 공동도급 진행에 필요한 파트너 탐색과 매칭을 지원합니다.</p>
-          </div>
-        </article>
-        <article class="service-card">
-          <span class="service-no">03</span>
-          <div>
-            <h3>업체별 개별 관리</h3>
-            <p>담당 분석관을 중심으로 업체별 전략을 관리하고 적격심사, 참가자격 등 입찰 과정의 확인 사항을 지원합니다.</p>
-          </div>
-        </article>
-      </div>
-    </section>
 
-    <section class="video-section section-shell">
-      <div class="section-title">
-        <p class="eyebrow">회사 소개 영상</p>
-        <h2>비드헬프를 영상으로 확인하세요</h2>
-        <p>모바일 데이터 사용량을 줄이기 위해 자동 재생하지 않습니다.</p>
-      </div>
-      <div class="video-frame">
-        <video controls playsinline preload="metadata" poster="./assets/video-poster.jpg">
-          <source src="./assets/bidhelp-intro-mobile.mp4" type="video/mp4" />
-          브라우저에서 영상을 재생할 수 없습니다.
-        </video>
-      </div>
-    </section>
-
-    <section class="why section-shell">
-      <div class="section-title">
-        <p class="eyebrow">WHY BIDHELP</p>
-        <h2>입찰 업무에 집중할 수 있도록</h2>
-      </div>
-      <div class="why-grid">
-        <article>
-          <strong>분석</strong>
-          <h3>누적 데이터 기반 검토</h3>
-          <p>한 번의 공고가 아니라 누적된 낙찰 흐름과 업체 특성을 함께 보며 분석합니다.</p>
-        </article>
-        <article>
-          <strong>관리</strong>
-          <h3>담당자 중심의 지속 관리</h3>
-          <p>입찰 과정에서 필요한 확인 사항을 놓치지 않도록 지속적으로 커뮤니케이션합니다.</p>
-        </article>
-        <article>
-          <strong>연결</strong>
-          <h3>공동도급과 협업 지원</h3>
-          <p>조건에 맞는 파트너 검토와 공동도급 진행을 지원해 입찰 기회를 넓힐 수 있도록 돕습니다.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="source section-shell">
-      <details>
-        <summary>
-          <span>회사 소개자료 원본 보기</span>
-          <small>탭하여 펼치기</small>
-        </summary>
-        <div class="source-image-wrap">
-          <img src="./assets/bidhelp-info.jpg" alt="도움건설정보 비드헬프 회사 소개자료" loading="lazy" />
+        <div class="hero-hint reveal is-visible">
+          <span>SCROLL</span>
+          <i></i>
         </div>
-      </details>
-    </section>
-
-    <section class="final-cta section-shell">
-      <p class="eyebrow">입찰 상담</p>
-      <h2>곽소영 팀장에게<br />바로 문의하세요.</h2>
-      <p>업체의 면허와 현재 입찰 상황을 알려주시면 상담을 도와드립니다.</p>
-      <div class="final-actions">
-        <a class="button primary" href="tel:01029877208">010-2987-7208</a>
-        <a class="button secondary" href="mailto:ktrsad@daum.net">이메일 보내기</a>
       </div>
     </section>
 
-    <footer class="footer section-shell">
-      <strong>(주)도움건설정보 · BIDHELP</strong>
-      <p>서울특별시 금천구 가산디지털2로 135, A동 1506~12호(가산어반워크)</p>
-      <p>T. 02-6737-3680 · F. 02-6280-3654</p>
-      <p class="copyright">© BIDHELP. All rights reserved.</p>
+    <section class="marquee-wrap" aria-label="주요 서비스">
+      <div class="marquee-track">
+        <span>분석시스템</span><i>•</i><span>공동도급시스템</span><i>•</i><span>편리한 입찰시스템</span><i>•</i><span>집중관리시스템</span><i>•</i>
+        <span>분석시스템</span><i>•</i><span>공동도급시스템</span><i>•</i><span>편리한 입찰시스템</span><i>•</i><span>집중관리시스템</span><i>•</i>
+      </div>
+    </section>
+
+    <section class="numbers section-pad" id="performance">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="kicker">2025 PERFORMANCE</p>
+          <h2>숫자로 확인하는<br />BIDHELP의 실적</h2>
+          <p>2026년 사업제안서에 수록된 2025년 실적을 모바일에 맞게 요약했습니다.</p>
+        </div>
+
+        <div class="performance-grid">
+          <article class="performance-card performance-primary reveal">
+            <span>2025년 총 낙찰금액</span>
+            <div><strong class="count" data-target="2016">0</strong><b>억</b></div>
+            <p>2024년 1,947억 → 2025년 2,016억</p>
+            <em>전년 대비 +3.5%</em>
+          </article>
+          <article class="performance-card reveal">
+            <span>연간 낙찰건수</span>
+            <div><strong class="count" data-target="814">0</strong><b>건</b></div>
+            <p>2025년 월별 실적 합계</p>
+          </article>
+          <article class="performance-card reveal">
+            <span>공동도급</span>
+            <div><strong class="count" data-target="772">0</strong><b>억</b></div>
+            <p>2024년 572억 → 2025년 772억</p>
+            <em>전년 대비 +34.9%</em>
+          </article>
+        </div>
+        <p class="disclaimer reveal">※ 회사 2026년 사업제안서에 기재된 2025년 실적 기준이며, 개별 업체의 낙찰 결과를 보장하지 않습니다.</p>
+      </div>
+    </section>
+
+    <section class="company-intro section-pad">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="kicker">ABOUT BIDHELP</p>
+          <h2>전자입찰에 필요한<br />분석과 관리를 한곳에서.</h2>
+          <p>(주)도움건설정보는 공공 전자입찰 컨설팅 전문기업으로, 전자입찰 컨설팅·공동입찰정보 제공·낙찰예측가격 분석 및 제공을 사업영역으로 운영합니다.</p>
+        </div>
+
+        <div class="company-facts">
+          <article class="fact-card reveal"><small>대표이사</small><strong>이원웅</strong><span>입찰경력 19년차 · 직접분석</span></article>
+          <article class="fact-card reveal"><small>설립</small><strong>2015</strong><span>공공 전자입찰 컨설팅</span></article>
+          <article class="fact-card reveal"><small>전문 관리</small><strong>전기 · 통신 · 소방</strong><span>전문건설 일부 면허 포함</span></article>
+        </div>
+
+        <div class="cert-strip reveal" aria-label="기업 인증 및 신고">
+          <span>사업자등록</span><span>메인비즈</span><span>이노비즈</span><span>중소기업확인</span><span>통신판매업신고</span><span>전화권유업신고</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="systems section-pad" id="systems">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="kicker">4 CORE SYSTEMS</p>
+          <h2>입찰 업무를 움직이는<br />4가지 시스템</h2>
+          <p>제안서의 핵심 서비스 구조를 실제 이용 흐름 중심으로 재구성했습니다.</p>
+        </div>
+
+        <div class="system-tabs reveal" role="tablist" aria-label="BIDHELP 시스템">
+          <button class="system-tab is-active" type="button" role="tab" aria-selected="true" data-system="analysis">분석</button>
+          <button class="system-tab" type="button" role="tab" aria-selected="false" data-system="joint">공동도급</button>
+          <button class="system-tab" type="button" role="tab" aria-selected="false" data-system="bidding">입찰</button>
+          <button class="system-tab" type="button" role="tab" aria-selected="false" data-system="care">집중관리</button>
+        </div>
+
+        <div class="system-stage reveal">
+          <article class="system-panel is-active" data-panel="analysis">
+            <span class="system-code">01 · ANALYSIS SYSTEM</span>
+            <h3>프로그램 + 직접 분석</h3>
+            <p>자동화 프로그램만으로 끝내지 않고, 장기간 개발·검증한 분석시스템과 직접 분석을 함께 활용해 투찰 판단을 지원합니다.</p>
+            <div class="system-points"><span>검증된 분석시스템</span><span>수기 직접 분석</span><span>누적 데이터 활용</span></div>
+          </article>
+          <article class="system-panel" data-panel="joint" hidden>
+            <span class="system-code">02 · JOINT BIDDING SYSTEM</span>
+            <h3>공동도급을 별도 시스템으로 관리</h3>
+            <p>공동도급 전담 인력과 시스템을 구성해 지역·면허·실적 조건을 확인하고, 협정 진행부터 투찰까지 지원합니다.</p>
+            <div class="system-points"><span>전담 인력</span><span>실시간 파트너 매칭</span><span>협정 진행 지원</span></div>
+          </article>
+          <article class="system-panel" data-panel="bidding" hidden>
+            <span class="system-code">03 · BIDDING SYSTEM</span>
+            <h3>낙찰분석실 · 투찰리스트 · 투찰리포트</h3>
+            <p>bidhelp.co.kr의 자체 입찰시스템에서 참여 공고와 분석가격을 관리하고, 투찰내역을 그래프와 리포트 형태로 확인할 수 있습니다.</p>
+            <div class="system-points"><span>참여공고 관리</span><span>분석가격 확인</span><span>투찰 리포트</span></div>
+          </article>
+          <article class="system-panel" data-panel="care" hidden>
+            <span class="system-code">04 · FOCUS MANAGEMENT</span>
+            <h3>면허별 1:1 집중관리</h3>
+            <p>전기·통신·소방과 일부 전문건설 면허를 중심으로 회원사를 제한 운영하며, 전담 분석관이 업체별로 집중 관리합니다.</p>
+            <div class="system-points"><span>회원사 300개 한정</span><span>분석담당관 6인 체제</span><span>1:1 맞춤분석</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bid-tools section-pad">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="kicker">BIDDING WORKSPACE</p>
+          <h2>매일 쓰는 입찰 업무를<br />더 빠르게 관리합니다.</h2>
+        </div>
+        <div class="tool-cards">
+          <article class="tool-card reveal"><span>NO.1</span><h3>낙찰분석실</h3><p>회원사가 참가 가능한 입찰공고를 월간 일정 형태로 제공해, 해당 기능을 통해 편리하게 투찰을 관리합니다.</p></article>
+          <article class="tool-card reveal"><span>NO.2</span><h3>투찰리스트</h3><p>투찰 마감 기준 +4일까지 가능한 공고와 분석가격을 확인하고, 분석금액을 바로 활용할 수 있도록 관리합니다.</p></article>
+          <article class="tool-card reveal"><span>NO.3</span><h3>투찰리포트</h3><p>투찰한 내역을 그래프와 리포트 형식으로 제공하며, 경쟁업체 투찰리포트 검색 기능도 제공합니다.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="joint-zone section-pad" id="joint">
+      <div class="section-shell">
+        <div class="section-heading light-heading reveal">
+          <p class="kicker">JOINT BIDDING</p>
+          <h2>공동도급도<br />하나의 프로세스로.</h2>
+          <p>제안서에 제시된 공동도급 업무 흐름을 상담자가 이해하기 쉽게 정리했습니다.</p>
+        </div>
+
+        <div class="joint-flow reveal">
+          <div class="flow-step"><b>01</b><span>지역·면허 분석회원사 세팅</span></div>
+          <div class="flow-step"><b>02</b><span>부족한 실적·면허 파악</span></div>
+          <div class="flow-step"><b>03</b><span>전국 공동회원사 협정 진행</span></div>
+          <div class="flow-step"><b>04</b><span>대표사 협정서 작성 요청</span></div>
+          <div class="flow-step"><b>05</b><span>구성사 승인·최종 제출</span></div>
+          <div class="flow-step"><b>06</b><span>협정 완료 확인</span></div>
+          <div class="flow-step"><b>07</b><span>투찰금액 제시</span></div>
+          <div class="flow-step flow-final"><b>08</b><span>고객 낙찰</span></div>
+        </div>
+
+        <div class="case-head reveal"><small>2025 공동도급 사례</small><h3>제안서에 수록된 실제 사례</h3></div>
+        <div class="case-list">
+          <article class="case-row reveal"><div><span>2025.12.24</span><strong>남양주왕숙2 A-3BL 아파트 정보통신공사</strong></div><b>69억</b></article>
+          <article class="case-row reveal"><div><span>2025.12.17</span><strong>시흥거모 A-7BL 아파트통신공사</strong></div><b>51억</b></article>
+          <article class="case-row reveal"><div><span>2025.03.26</span><strong>성남복정1 C1·C2·C3BL 아파트정보통신공사</strong></div><b>50억</b></article>
+          <article class="case-row reveal"><div><span>2025.02.13</span><strong>마곡16단지 공공주택 정보통신공사</strong></div><b>83억</b></article>
+        </div>
+        <p class="joint-note reveal">※ 분석회원은 당사 분석회원사, 공동회원은 공동도급 진행 회원사 기준으로 제안서에 기재된 사례를 요약했습니다.</p>
+      </div>
+    </section>
+
+    <section class="management section-pad">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="kicker">FOCUS MANAGEMENT</p>
+          <h2>많이 받기보다<br />집중해서 관리합니다.</h2>
+          <p>제안서에 기재된 집중관리 운영 원칙을 한눈에 볼 수 있도록 정리했습니다.</p>
+        </div>
+        <div class="management-grid">
+          <article class="manage-card reveal"><small>집중관리</small><strong>300개</strong><p>회원사를 300개로 한정하고, 분석담당관 6인 체제로 1인당 약 50개 회원사를 관리합니다.</p></article>
+          <article class="manage-card reveal"><small>면허별 관리</small><strong>전기 · 통신 · 소방</strong><p>전문건설 면허를 포함해 면허별로 구분하고 전문 분석을 진행합니다.</p></article>
+          <article class="manage-card reveal"><small>지역 세분화</small><strong>제한 운영</strong><p>서울·경기, 도내, 광역시 등 지역별로 운영 수를 제한해 집중도를 높입니다.</p></article>
+          <article class="manage-card reveal"><small>공동도급 네트워크</small><strong>253개</strong><p>제안서 기준 공동도급 업체를 별도 관리하며 원격지원, 공고정리, 간편입찰 서비스를 제공합니다.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="growth section-pad">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="kicker">ANNUAL PERFORMANCE</p>
+          <h2>꾸준히 쌓여온<br />연간 낙찰 실적</h2>
+        </div>
+        <div class="growth-panel reveal">
+          <div class="growth-head">
+            <div><small>2018 - 2025</small><h3>연간 낙찰금액</h3></div>
+            <strong>2025 · 2,016억</strong>
+          </div>
+          <div class="growth-bars" aria-label="2018년부터 2025년까지 연간 낙찰금액">
+            <div class="growth-bar"><span>18</span><i style="--h:44%"></i><b>890억</b></div>
+            <div class="growth-bar"><span>19</span><i style="--h:65%"></i><b>1,309억</b></div>
+            <div class="growth-bar"><span>20</span><i style="--h:71%"></i><b>1,439억</b></div>
+            <div class="growth-bar"><span>21</span><i style="--h:78%"></i><b>1,574억</b></div>
+            <div class="growth-bar"><span>22</span><i style="--h:75%"></i><b>1,521억</b></div>
+            <div class="growth-bar"><span>23</span><i style="--h:79%"></i><b>1,590억</b></div>
+            <div class="growth-bar"><span>24</span><i style="--h:97%"></i><b>1,947억</b></div>
+            <div class="growth-bar active"><span>25</span><i style="--h:100%"></i><b>2,016억</b></div>
+          </div>
+          <p>사업제안서의 연간 낙찰 성과 기준입니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="speed section-pad">
+      <div class="section-shell">
+        <div class="speed-card reveal">
+          <p class="kicker">2025 MEMBER CASES</p>
+          <h2>가입부터 낙찰까지<br /><span>평균 3개월 미만</span></h2>
+          <p>2025년 사업제안서에 수록된 회원사 사례 기준입니다. 개별 결과와 기간은 업체·공고·입찰환경에 따라 달라질 수 있습니다.</p>
+          <div class="speed-chips"><span><b>3일</b> 사례</span><span><b>6일</b> 사례</span><span><b>7일</b> 사례</span><span><b>10일</b> 사례</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews section-pad">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <p class="kicker">MEMBER STORIES</p>
+          <h2>회원사가 전한<br />낙찰 경험</h2>
+          <p>사업제안서에 수록된 회원사 후기를 핵심 내용만 요약했습니다.</p>
+        </div>
+        <div class="review-grid">
+          <article class="review-card reveal"><span>안산 · 전기</span><p>약 2년간 낙찰 소식이 없던 회원사가 가입 후 한 달 안에 여러 건의 낙찰을 경험했다는 후기를 남겼습니다.</p><small>회원사 후기 요약</small></article>
+          <article class="review-card reveal"><span>수원 · 기계설비/전기/소방</span><p>이용한 지 한 달도 되지 않아 예상보다 많은 낙찰 소식이 있었다며 상담과 서비스를 계속 이용하겠다는 후기를 남겼습니다.</p><small>회원사 후기 요약</small></article>
+        </div>
+        <p class="disclaimer reveal">※ 후기는 제안서에 수록된 개별 회원사의 경험을 요약한 것으로 동일한 결과를 의미하거나 보장하지 않습니다.</p>
+      </div>
+    </section>
+
+    <section class="video-zone section-pad">
+      <div class="section-shell">
+        <div class="section-heading light-heading reveal">
+          <p class="kicker">BIDHELP BRAND FILM</p>
+          <h2>비드헬프를<br />영상으로 확인하세요.</h2>
+        </div>
+        <div class="video-card reveal">
+          <video id="introVideo" playsinline preload="metadata" poster="./assets/video-poster.jpg">
+            <source src="./assets/bidhelp-intro-mobile.mp4" type="video/mp4" />
+          </video>
+          <button class="video-play" id="videoPlay" type="button" aria-label="회사 소개 영상 재생"><span>▶</span><strong>영상 재생</strong></button>
+        </div>
+        <p class="video-note reveal">모바일 데이터 사용량을 줄이기 위해 자동 재생하지 않습니다.</p>
+      </div>
+    </section>
+
+    <section class="final-cta section-pad">
+      <div class="cta-orb" aria-hidden="true"></div>
+      <div class="section-shell cta-inner reveal">
+        <p class="kicker">LET'S TALK</p>
+        <h2>입찰 상담,<br />곽소영 팀장에게<br />바로 문의하세요.</h2>
+        <p>보유 면허와 지역, 현재 입찰 상황을 알려주시면 상담을 도와드립니다.</p>
+        <a class="cta-phone" href="tel:01029877208"><span>전화 상담</span><strong>010-2987-7208</strong><em>↗</em></a>
+        <a class="cta-mail" href="mailto:ktrsa@daum.net">ktrsa@daum.net</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="section-shell">
+        <div class="footer-brand">BIDHELP <span>· (주)도움건설정보</span></div>
+        <p>서울시 금천구 가산디지털2로 135, A동 1506~12호 (가산어반워크)</p>
+        <p>T. 02-6737-3680 &nbsp; F. 02-6280-3654</p>
+        <p>E. ktrsa@daum.net</p>
+        <p class="copyright">© BIDHELP. All rights reserved.</p>
+      </div>
     </footer>
   </main>
 
-  <div class="mobile-dock" aria-label="빠른 상담 메뉴">
-    <a href="sms:01029877208">문자 문의</a>
-    <a class="dock-primary" href="tel:01029877208">곽소영 팀장 전화하기</a>
+  <div class="mobile-dock" aria-label="빠른 상담">
+    <a class="dock-sub" href="sms:01029877208"><span>✉</span> 문자 문의</a>
+    <a class="dock-main" href="tel:01029877208"><span>☎</span> 곽소영 팀장 전화하기</a>
   </div>
 </body>
 </html>
