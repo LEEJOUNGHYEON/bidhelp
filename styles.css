@@ -633,3 +633,271 @@ button { font: inherit; }
   .mobile-dock { padding-left: 10px; padding-right: 10px; }
   .mobile-dock a { min-height: 46px; }
 }
+
+/* ===== V4.3 · Corporate visual refinement ===== */
+:root {
+  --navy-950: #071b33;
+  --navy-900: #0a2442;
+  --navy-800: #123b64;
+  --blue: #155eab;
+  --cyan: #55c5e8;
+  --ink: #182230;
+  --muted: #6f7b8c;
+  --line: #e3e8ef;
+  --soft: #f5f7fa;
+  --radius: 22px;
+  --shadow: 0 18px 48px rgba(12, 38, 66, .10);
+}
+
+/* Overall tone: less startup-like, more corporate */
+.hero {
+  background:
+    radial-gradient(circle at 84% 16%, rgba(31, 103, 181, .20), transparent 30%),
+    linear-gradient(145deg, #071b33 0%, #0b294b 62%, #10385f 100%);
+}
+.grid-noise { opacity: .08; }
+.hero-orb-a { opacity: .45; animation: none; }
+.hero-orb-b { opacity: .30; animation: none; }
+.live-badge { color: #d6e7f5; }
+.pulse-dot { width: 7px; height: 7px; animation: none; box-shadow: none; }
+.gradient-text {
+  background: linear-gradient(90deg, #ffffff 0%, #a9daf2 58%, #70cce9 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* Cleaner manager card */
+.profile-card {
+  background: rgba(255,255,255,.085);
+  border-color: rgba(255,255,255,.14);
+  box-shadow: 0 22px 56px rgba(0,0,0,.18);
+}
+.profile-card-glow { opacity: .35; }
+.profile-top { grid-template-columns: 1fr auto; gap: 14px; }
+.profile-name span { color: rgba(255,255,255,.54); font-size: 10px; }
+.profile-name h2 { margin-top: 5px; font-size: 27px; }
+.profile-name h2 small { margin-left: 3px; font-size: 12px; }
+.available { background: rgba(76, 198, 141, .08); border-color: rgba(128, 225, 178, .18); }
+.profile-divider { margin-top: 18px; }
+.profile-contact a { grid-template-columns: 31px 1fr auto; padding: 12px 0; }
+.contact-icon { width: 30px; height: 30px; border-radius: 9px; }
+.profile-actions, .avatar { display: none !important; }
+
+/* Static service rail instead of animated marquee */
+.marquee-wrap {
+  overflow-x: auto;
+  border-top: 0;
+  background: #fff;
+  scrollbar-width: none;
+}
+.marquee-wrap::-webkit-scrollbar { display: none; }
+.marquee-track {
+  width: max-content;
+  min-width: 100%;
+  padding: 17px max(18px, calc((100vw - 760px)/2));
+  animation: none !important;
+  gap: 14px;
+  color: #667487;
+  font-size: 11px;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+.marquee-track i { color: #82b8db; }
+
+/* Typography & section labels */
+.kicker {
+  margin-bottom: 11px;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .045em;
+}
+.section-heading h2 { color: var(--ink); }
+.section-heading > p:last-child:not(.kicker) { color: var(--muted); }
+
+/* Performance becomes the visual hero of the content */
+.numbers { background: #f4f7fa; }
+.performance-grid { gap: 10px; }
+.performance-card {
+  border-radius: 20px;
+  border-color: #e1e7ee;
+  box-shadow: none;
+}
+.performance-primary {
+  background: #0a2b4f;
+  box-shadow: 0 18px 42px rgba(7,43,79,.13);
+}
+.performance-primary::after {
+  content: "";
+  position: absolute;
+  right: -54px; top: -62px;
+  width: 170px; height: 170px;
+  border-radius: 50%;
+  background: rgba(72, 151, 214, .13);
+}
+.performance-card strong { letter-spacing: -.05em; }
+
+/* Business facts: simpler and flatter */
+.fact-card, .tool-card, .manage-card, .proof-card {
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: none;
+}
+.cert-strip span {
+  background: #f1f5f9;
+  color: #4d647b;
+  border: 1px solid #e4e9ef;
+}
+
+/* 4 core systems: light, readable corporate cards */
+.systems { background: #f4f7fa; }
+.system-tabs {
+  padding: 4px;
+  border-radius: 15px;
+  border-color: #dfe5ec;
+  box-shadow: 0 8px 24px rgba(21,47,74,.04);
+}
+.system-tab { color: #6f7c8c; }
+.system-tab.is-active {
+  background: #10385f;
+  box-shadow: none;
+}
+.system-panel {
+  padding: 25px 20px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid #dfe6ee;
+  border-radius: 21px;
+  box-shadow: 0 14px 34px rgba(15,48,78,.07);
+}
+.system-code { color: #337ab5; letter-spacing: .05em; }
+.system-panel h3 { color: #152234; }
+.system-panel p { color: #657286; }
+.system-points span {
+  border-color: #dce6ef;
+  background: #f5f8fb;
+  color: #405b74;
+}
+
+/* Bidding workspace uses quiet numbered rows */
+.tool-card > span {
+  min-width: 28px;
+  justify-content: center;
+  background: #edf3f8;
+  color: #356d9d;
+  border-radius: 8px;
+}
+
+/* Keep one dark process section for visual contrast */
+.joint-zone {
+  background: linear-gradient(150deg, #071b33, #0d3156 72%, #123e69);
+}
+.joint-flow { gap: 9px; }
+.flow-step {
+  background: rgba(255,255,255,.045);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.flow-final { background: rgba(70, 150, 205, .16); }
+
+/* Reviews and supporting cards */
+.management { background: #f5f7fa; }
+.growth-panel { background: #0b2c50; box-shadow: 0 16px 40px rgba(8,45,80,.12); }
+.review-card { box-shadow: none; }
+
+/* Final contact: restrained typography */
+.final-cta { background: #071b33; }
+.cta-orb { opacity: .52; }
+.final-cta .kicker { color: #7fc5e5; }
+.final-cta h2 { font-size: clamp(36px, 9vw, 56px); }
+.cta-phone {
+  border-radius: 18px;
+  box-shadow: none;
+}
+
+/* Compact bottom action dock: call is the primary action */
+.mobile-dock {
+  grid-template-columns: 64px 1fr;
+  gap: 8px;
+  padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+  background: rgba(248,250,252,.94);
+  border-top-color: rgba(15,42,68,.08);
+  box-shadow: 0 -10px 30px rgba(10,35,61,.07);
+}
+.mobile-dock a { min-height: 48px; border-radius: 14px; }
+.dock-sub {
+  flex-direction: column;
+  gap: 1px !important;
+  border-color: #dfe5ec;
+  color: #41556a;
+  font-size: 12px !important;
+}
+.dock-sub small { font-size: 8px; font-weight: 800; line-height: 1; }
+.dock-main {
+  background: #155eab;
+  box-shadow: none;
+  font-size: 14px !important;
+}
+
+/* Mobile balance */
+@media (max-width: 699px) {
+  .section-pad { padding-top: 80px; padding-bottom: 80px; }
+  .hero-inner { padding-top: 62px; padding-bottom: 48px; }
+  .profile-card { margin-top: 34px; padding: 20px; }
+  .section-heading { margin-bottom: 28px; }
+  .system-stage { margin-top: 14px; }
+  .final-cta { padding-bottom: 104px; }
+}
+
+@media (max-width: 380px) {
+  .section-pad { padding-top: 72px; padding-bottom: 72px; }
+  .hero-inner { padding-top: 54px; padding-bottom: 42px; }
+  .hero-copy h1 { font-size: 39px; }
+  .profile-card { margin-top: 30px; padding: 18px; }
+  .profile-name h2 { font-size: 25px; }
+  .system-panel { padding: 23px 18px; }
+  .mobile-dock { grid-template-columns: 58px 1fr; }
+}
+
+/* V4.3.1 — restore contrast inside dark sections */
+.video-zone {
+  background: linear-gradient(155deg, #08213d, #0b3158 68%, #0d4275);
+}
+.joint-zone {
+  background: linear-gradient(150deg, #08213b, #0d365f 72%, #124874);
+}
+
+.video-zone .section-heading h2,
+.joint-zone .section-heading h2 {
+  color: #ffffff;
+}
+
+.video-zone .section-heading > p:last-child:not(.kicker),
+.joint-zone .section-heading > p:last-child:not(.kicker) {
+  color: rgba(255,255,255,.70);
+}
+
+.video-zone .kicker,
+.joint-zone .kicker {
+  color: #83d8ff;
+}
+
+.video-note {
+  color: rgba(255,255,255,.62);
+}
+
+.flow-step span {
+  color: rgba(255,255,255,.92);
+}
+.flow-step b {
+  color: #8fe4ff;
+}
+.case-head h3,
+.case-row strong {
+  color: #ffffff;
+}
+.case-row span {
+  color: rgba(255,255,255,.58);
+}
+.joint-note {
+  color: rgba(255,255,255,.58);
+}
