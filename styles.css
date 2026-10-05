@@ -163,6 +163,7 @@ button { font: inherit; }
 .video-card { position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,.14); border-radius: 26px; background: #020710; box-shadow: 0 28px 60px rgba(0,0,0,.30); }
 .video-card video { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 .video-play { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 10px; border: 0; color: #fff; background: linear-gradient(to top, rgba(1, 8, 18, .58), rgba(1, 8, 18, .12)); cursor: pointer; }
+.video-play[hidden], .video-play.is-hidden { display: none !important; pointer-events: none; }
 .video-play span { display: grid; place-items: center; width: 62px; height: 62px; border: 1px solid rgba(255,255,255,.28); border-radius: 50%; background: rgba(255,255,255,.12); backdrop-filter: blur(8px); font-size: 18px; padding-left: 3px; transition: transform .2s ease; }
 .video-play:hover span { transform: scale(1.06); }
 .video-play strong { font-size: 12px; letter-spacing: .04em; }
@@ -900,4 +901,52 @@ button { font: inherit; }
 }
 .joint-note {
   color: rgba(255,255,255,.58);
+}
+
+/* v4.3.2 — 연간 실적 차트 라벨 정리 */
+.growth-head strong {
+  max-width: 280px;
+  text-align: right;
+  line-height: 1.45;
+}
+.growth-bar {
+  grid-template-rows: 1fr auto;
+}
+.growth-bar span {
+  font-size: 8px;
+  letter-spacing: -0.02em;
+  color: rgba(255,255,255,.58);
+}
+.growth-bar.active span {
+  color: #fff;
+  font-weight: 800;
+}
+.growth-bar b {
+  display: none !important;
+}
+.growth-range {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,.10);
+  color: rgba(255,255,255,.62);
+  font-size: 11px;
+}
+.growth-range b {
+  color: #fff;
+  margin-right: 5px;
+}
+@media (max-width: 480px) {
+  .growth-head {
+    align-items: flex-end;
+  }
+  .growth-head strong {
+    max-width: 160px;
+    font-size: 10px;
+  }
+  .growth-bar span {
+    font-size: 7px;
+  }
 }

@@ -62,15 +62,37 @@ systemTabs.forEach((tab) => {
 });
 
 if (video && videoPlay) {
+  const playLabel = videoPlay.querySelector('strong');
+
+  const hideVideoPlay = () => {
+    videoPlay.hidden = true;
+    videoPlay.classList.add('is-hidden');
+  };
+
+  const showVideoPlay = (label = '영상 재생') => {
+    if (playLabel) playLabel.textContent = label;
+    videoPlay.hidden = false;
+    videoPlay.classList.remove('is-hidden');
+  };
+
   videoPlay.addEventListener('click', async () => {
+    video.controls = true;
+    hideVideoPlay();
+
     try {
-      video.controls = true;
       await video.play();
-      videoPlay.hidden = true;
     } catch (_) {
-      video.controls = true;
+      showVideoPlay('영상 재생');
     }
   });
 
-  video.addEventListener('ended', () => { videoPlay.hidden = false; });
+  // 재생이 시작되면 커스텀 오버레이를 완전히 치워
+  // 브라우저 기본 컨트롤(일시정지/탐색/볼륨)을 사용할 수 있게 합니다.
+  video.addEventListener('play', hideVideoPlay);
+  video.addEventListener('playing', hideVideoPlay);
+
+  // 영상이 끝났을 때만 다시 재생 버튼을 보여줍니다.
+  video.addEventListener('ended', () => {
+    showVideoPlay('다시 재생');
+  });
 }
